@@ -15,6 +15,8 @@ COPY /Gemfile.lock /opt/
 
 RUN bundle install --gemfile=/opt/Gemfile
 
+COPY / /opt/
+
 WORKDIR /opt
 
 CMD ["rake"]
