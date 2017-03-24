@@ -10,7 +10,8 @@ RUN export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64" && \
   ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin/phantomjs  && \
   ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/bin/phantomjs
 
-COPY / /opt/
+COPY /Gemfile /opt/
+COPY /Gemfile.lock /opt/
 
 RUN bundle install --gemfile=/opt/Gemfile
 

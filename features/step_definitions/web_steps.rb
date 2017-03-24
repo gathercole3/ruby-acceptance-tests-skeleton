@@ -1,5 +1,5 @@
 Given /^I am on the home page$/ do
-  visit('/ncr')
+  visit('http://www.jacardgames.co.uk')
 end
 
 Given /^I have entered "([^"]*)" into the "([^"]*)" field$/ do |text, field|
@@ -9,5 +9,3 @@ end
 Then /^I should see "([^"]*)"$/ do |text|
   page.should have_content(text)
 end
-
-
